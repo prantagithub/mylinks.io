@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+h1 {
+  padding: 20px;
+  font-family: "Kaisei Tokumin", serif;
+  font-size: 3rem;
+  color: white;
+}
+.form-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.search-box input {
+  margin: 10px;
+  min-height: 10px;
+  min-width: 200px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.search-box input:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+}
+button {
+  margin: 20px 5px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  background-color: lightgray;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.493);
+}
+button:hover {
+  background-color: rgb(185, 185, 185);
+}
+button:active {
+  background-color: rgb(185, 185, 185);
+  transform: translate(2px, 3px);
+  box-shadow: none;
+}
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.links {
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  width: 250px;
+  text-decoration: none;
+  color: black;
+  font-family: "Inconsolata", monospace;
+}
+
+.search-box {
+  padding: 5px 10px;
+  background-color: darkgray;
+  border-radius: 50px;
+  transition: transform 0.2s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.397);
+}
+.search-box:hover {
+  transform: scale(1.1);
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.6;
+}
+.form-container {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  background-color: gray;
+  width: 300px;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+@media only screen and (min-width: 700px) {
+  .links {
+    width: 470px;
+  }
+  .form-container {
+    width: 500px;
+  }
+}
+.copy-btn {
+  margin: 0px 10px;
+  background-color: rgb(184, 184, 184);
+}
+.link-desc {
+  overflow: hidden;
+  margin: 0px 5px;
+}
+.footer-basic {
+  background-color: lightgray;
+  padding: 10px;
+  text-align: left;
+  color: rgb(117, 117, 117);
+  font-family: "Inconsolata", monospace;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

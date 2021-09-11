@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form-container">
+    <h1>myLinks.io</h1>
+    <div class="form-body">
+        <form action="/" method="POST">
+            <div class="search-box"><input placeholder="your link here" type="text" name="url"></div>
+            <button type="submit">Submit</button>
+            <button type="submit" formaction="/deleteAll" formmethod="GET">Reset</button>
+        </form>
+    </div>
+    <div class="result">
+        <%- (urlSet.length>0)? urlSet.slice(0).reverse().map(ele=>{return '<div  class="links">'+`<a class="link-desc" href=${ele.url} target="_blank">`+ele.url+'</a><form>'+`<button class="copy-btn" type="submit" formaction="/delete/${ele.id}" formmethod="GET">`+'Delete</button></form></div>'}).join('')
+            :""
+            %>
+    </div>
+    </div>
+    <footer class="footer-basic">prantaneel</footer>
+
+</body>
+
+</html>
