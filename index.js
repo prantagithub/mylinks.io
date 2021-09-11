@@ -77,4 +77,4 @@ app.post('/', (req, res) => {
     updateData(urlSet);
     res.redirect('/');
 })
-app.listen(process.env.PORT, () => { console.log('started') });
+app.listen(process.env.PORT || 3000, () => { console.log('started') });
